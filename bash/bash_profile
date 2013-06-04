@@ -4,12 +4,12 @@ alias dl="less -Rfn +F log/development.log"
 alias ga="git add -A ."
 alias glg="git lg"
 alias branch="git branch -av"
-alias rs="rails server thin"
+alias be="bundle exec"
+alias rs="rails server"
 alias rc="rails console"
-alias ss="thin start"
+alias ss="script/server"
 alias sc="script/console"
 alias ur="unicorn_rails --listen 3000"
-alias regem="rvm --force gemset empty && rm Gemfile.lock && gem install bundler && bundle"
 
 function push {
   BRANCH=`git branch | grep '^*' | colrm 1 2`
@@ -27,6 +27,8 @@ function parse_git_branch {
 }
 export PS1="\h:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[00m\]\$ "
 
-source ~/.profile
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source ~/.profile
