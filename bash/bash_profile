@@ -22,11 +22,10 @@ function pushf {
   git push -f origin $BRANCH
 }
 
-# Add current git repository branch to PS1
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\(\1\)/'
-}
-export PS1="\h:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[00m\]\$ "
+# Git tab-completion and prompt injection
+source /usr/share/git-core/git-completion.bash
+source /usr/share/git-core/git-prompt.sh
+export PS1="\h:\w\[\033[0;32m\]\$(__git_ps1)\[\033[00m\]\$ "
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
