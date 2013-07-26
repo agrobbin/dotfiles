@@ -10,7 +10,9 @@ alias rc="rails console"
 alias ss="script/server"
 alias sc="script/console"
 alias ur="unicorn_rails --listen 3000"
+alias ber="be rake"
 alias r="be rspec"
+alias g="be guard"
 
 function push {
   BRANCH=`git branch | grep '^*' | colrm 1 2`
