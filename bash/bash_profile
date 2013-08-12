@@ -12,7 +12,7 @@ alias sc="script/console"
 alias ur="unicorn_rails --listen 3000"
 alias ber="be rake"
 alias r="be rspec"
-alias g="be guard"
+alias g="be guard --notify false"
 alias dbreset="ber db:drop db:create db:migrate db:seed db:test:clone"
 
 function push {
