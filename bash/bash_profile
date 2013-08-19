@@ -30,6 +30,9 @@ source /usr/share/git-core/git-completion.bash
 source /usr/share/git-core/git-prompt.sh
 export PS1="\h:\w\[\033[0;32m\]\$(__git_ps1)\[\033[00m\]\$ "
 
+# Homebrew tab-completion
+source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
