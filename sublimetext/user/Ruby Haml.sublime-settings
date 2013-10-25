@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"hamlc"
+		"hamlc",
+		"hamlbars"
 	]
 }
