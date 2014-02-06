@@ -12,8 +12,8 @@ alias sc="script/console"
 alias ur="unicorn_rails --listen 3000"
 alias ber="be rake"
 alias r="be rspec"
+alias c="be cucumber"
 alias g="be guard --notify false"
-alias dbreset="ber db:drop db:create db:migrate db:seed db:test:clone"
 
 function push {
   BRANCH=`git branch | grep '^*' | colrm 1 2`
@@ -28,7 +28,10 @@ function pushf {
 # Git tab-completion and prompt injection
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-export PS1="\h:\w\[\033[0;32m\]\$(__git_ps1)\[\033[00m\]\$ "
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWCOLORHINTS=true
+PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
 
 # Homebrew tab-completion
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
