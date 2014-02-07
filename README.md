@@ -25,6 +25,8 @@ ln -s `pwd`/rubygems/gemrc ~/.gemrc
 ## Sublime Text
 
 ```bash
-ln -s `pwd`/sublimetext/packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-ln -s `pwd`/sublimetext/user ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -s `pwd`/sublimetext/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/.
+ln -s `pwd`/sublimetext/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/.
+ln -s `pwd`/sublimetext/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/.
+ln -s `pwd`/sublimetext/Ruby\ Haml.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/.
 ```

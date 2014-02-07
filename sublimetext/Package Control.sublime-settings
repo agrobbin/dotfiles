@@ -4,10 +4,13 @@
 	[
 		"CoffeeScript",
 		"Cucumber",
+		"GitGutter",
+		"Github Color Theme",
 		"Package Control",
 		"RSpec",
 		"Sass",
 		"SideBarEnhancements",
+		"sublime-github",
 		"Theme - Soda"
 	]
 }
