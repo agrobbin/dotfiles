@@ -31,7 +31,7 @@ source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
-PROMPT_COMMAND='__git_ps1 "\h:\w" "\\\$ "'
+PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
 
 # Homebrew tab-completion
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
