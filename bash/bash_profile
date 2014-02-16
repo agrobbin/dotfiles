@@ -25,16 +25,16 @@ function pushf {
   git push -f origin $BRANCH
 }
 
-# Git tab-completion and prompt injection
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+# Homebrew bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+# Git prompt injection
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
 PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
-
-# Homebrew tab-completion
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
