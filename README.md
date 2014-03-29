@@ -11,8 +11,7 @@ ln -s `pwd`/bash/bash_profile ~/.bash_profile
 ## Git
 
 ```bash
-sudo mkdir -p /Applications/Xcode.app/Contents/Developer/usr/etc
-sudo ln -s `pwd`/git/gitconfig /Applications/Xcode.app/Contents/Developer/usr/etc/gitconfig
+ln -s `pwd`/git/gitconfig /usr/local/etc/gitconfig
 ln -s `pwd`/git/gitignore_global ~/.gitignore_global
 ```
 
