@@ -2,7 +2,6 @@ export EDITOR=nano
 
 alias dl="less -Rfn +F log/development.log"
 alias ga="git add -A ."
-alias glg="git lg"
 alias branch="git branch -av"
 alias be="bundle exec"
 alias rs="rails server"
