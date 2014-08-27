@@ -7,5 +7,9 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore_global
+[help]
+  autocorrect = 1
+[rebase]
+  autosquash = true
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%aN)%Creset' --abbrev-commit --date=relative
