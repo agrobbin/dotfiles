@@ -2,7 +2,7 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"CoffeeScript",
+		"Better CoffeeScript",
 		"Cucumber",
 		"GitGutter",
 		"Github Color Theme",
