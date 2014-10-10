@@ -3,6 +3,7 @@
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "SourceCodePro-Regular",
 	"font_size": 14.0,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -11,6 +12,5 @@
 	"tab_size": 2,
 	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"highlight_line": true
+	"trim_trailing_white_space_on_save": true
 }
