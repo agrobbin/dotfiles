@@ -6,13 +6,8 @@ alias branch="git branch -av"
 alias be="bundle exec"
 alias rs="rails server"
 alias rc="rails console"
-alias ss="script/server"
-alias sc="script/console"
-alias ur="unicorn_rails --listen 3000"
 alias ber="be rake"
 alias r="be rspec"
-alias c="be cucumber"
-alias g="be guard --notify false"
 
 function push {
   BRANCH=`git branch | grep '^*' | colrm 1 2`
