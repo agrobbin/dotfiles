@@ -1,5 +1,9 @@
 {
 	"auto_upgrade_last_run": null,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Better CoffeeScript",
@@ -7,11 +11,13 @@
 		"Gherkin (Cucumber) Formatter",
 		"GitGutter",
 		"Github Color Theme",
+		"Handlebars",
 		"Package Control",
 		"RSpec",
 		"Sass",
 		"SideBarEnhancements",
 		"sublime-github",
+		"Swift",
 		"Theme - Soda"
 	]
 }
