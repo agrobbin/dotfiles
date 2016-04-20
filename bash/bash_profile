@@ -1,6 +1,5 @@
 export EDITOR=nano
 
-alias dl="less -Rfn +F log/development.log"
 alias ga="git add -A ."
 alias branch="git branch -av"
 alias be="bundle exec"
@@ -8,16 +7,6 @@ alias rs="rails server"
 alias rc="rails console"
 alias ber="be rake"
 alias r="be rspec"
-
-function push {
-  BRANCH=`git branch | grep '^*' | colrm 1 2`
-  git push origin $BRANCH
-}
-
-function pushf {
-  BRANCH=`git branch | grep '^*' | colrm 1 2`
-  git push -f origin $BRANCH
-}
 
 # Homebrew bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
