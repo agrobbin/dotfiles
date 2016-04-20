@@ -13,8 +13,13 @@
   autocorrect = 1
 [rebase]
   autosquash = true
+  stat = true
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%aN)%Creset' --abbrev-commit --date=relative
   push-each-commit = !git fetch && git rev-list --reverse origin/master..HEAD | xargs -n 1 -I {} bash -c 'git reset --hard {} && git push -f'
 [push]
   default = simple
+[fetch]
+  prune = true
+[status]
+  showUntrackedFiles = all
