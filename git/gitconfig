@@ -11,6 +11,10 @@
   excludesfile = ~/.gitignore_global
 [help]
   autocorrect = 1
+[diff]
+  indentHeuristic = on
+[interactive]
+  diffFilter = diff-highlight
 [rebase]
   autosquash = true
   autoStash = true
