@@ -1,4 +1,5 @@
 export EDITOR=nano
+export PATH="$PATH:`yarn global bin`"
 
 alias ga="git add -A ."
 alias branch="git branch -av"
