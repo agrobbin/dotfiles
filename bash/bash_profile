@@ -1,3 +1,11 @@
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+
+# nodenv
+export NODENV_ROOT=/usr/local/var/nodenv
+eval "$(nodenv init -)"
+
 export EDITOR=nano
 export PATH="$PATH:`yarn global bin`"
 
@@ -19,9 +27,5 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
 PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
-
-# rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
 
 source ~/.profile
