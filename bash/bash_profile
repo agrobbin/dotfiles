@@ -7,7 +7,6 @@ export NODENV_ROOT=/usr/local/var/nodenv
 eval "$(nodenv init -)"
 
 export EDITOR=nano
-export PATH="$PATH:`yarn global bin`"
 
 alias ga="git add -A ."
 alias branch="git branch -av"
@@ -27,5 +26,9 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
 PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
+
+function yarnx {
+  `yarn bin`/$@
+}
 
 source ~/.profile
