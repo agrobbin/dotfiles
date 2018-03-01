@@ -28,7 +28,7 @@ GIT_PS1_SHOWCOLORHINTS=true
 PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
 
 function yarnx {
-  `yarn bin`/$@
+  `yarn bin`/$1 "${@:2}"
 }
 
 source ~/.profile
