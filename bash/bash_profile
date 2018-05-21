@@ -8,6 +8,8 @@ eval "$(nodenv init -)"
 
 export EDITOR=nano
 
+export GPG_TTY=$(tty)
+
 alias ga="git add -A ."
 alias branch="git branch -av"
 alias be="bundle exec"
