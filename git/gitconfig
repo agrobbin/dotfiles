@@ -7,16 +7,16 @@
   branch = auto
   interactive = auto
 [core]
-  quotepath = false
-  excludesfile = ~/.gitignore_global
+  quotePath = false
+  excludesFile = ~/.gitignore_global
 [help]
-  autocorrect = 1
+  autoCorrect = 1
 [diff]
   indentHeuristic = on
 [interactive]
   diffFilter = diff-highlight
 [rebase]
-  autosquash = true
+  autoSquash = true
   autoStash = true
   stat = true
 [alias]
@@ -29,4 +29,4 @@
 [status]
   showUntrackedFiles = all
 [commit]
-  gpgsign = true
+  gpgSign = true
