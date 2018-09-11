@@ -2,6 +2,7 @@
 	"color_scheme": "Packages/ayu/ayu-light.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 14,
+	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
 	[
 		"Vintage"
