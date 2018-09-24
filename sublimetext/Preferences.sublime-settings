@@ -1,6 +1,10 @@
 {
 	"color_scheme": "Packages/ayu/ayu-light.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"font_options":
+	[
+		"gray_antialias"
+	],
 	"font_size": 14,
 	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
@@ -11,6 +15,10 @@
 	"show_definitions": false,
 	"tab_size": 2,
 	"theme": "Adaptive.sublime-theme",
+	"theme_font_options":
+	[
+		"gray_antialias"
+	],
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
