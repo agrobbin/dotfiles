@@ -19,8 +19,16 @@ alias ber="be rake"
 alias r="be rspec"
 
 # Homebrew bash completion
-if [ -d $(brew --prefix)/etc/bash_completion.d/ ]; then
-  for f in $(brew --prefix)/etc/bash_completion.d/*; do source $f; done
+HOMEBREW_PREFIX=$(brew --prefix)
+if type brew &>/dev/null; then
+  for COMPLETION in "$HOMEBREW_PREFIX"/etc/bash_completion.d/*
+  do
+    [[ -f $COMPLETION ]] && source "$COMPLETION"
+  done
+  if [[ -f ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]];
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  fi
 fi
 
 # Git prompt injection
