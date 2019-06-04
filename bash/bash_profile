@@ -18,7 +18,17 @@ alias rc="rails console"
 alias ber="be rake"
 alias r="be rspec"
 
-# Homebrew bash completion
+function yarnx {
+  `yarn bin`/$1 "${@:2}"
+}
+
+# Git prompt configuration and injection
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWCOLORHINTS=true
+PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
+
+# Homebrew completion
 HOMEBREW_PREFIX=$(brew --prefix)
 if type brew &>/dev/null; then
   for COMPLETION in "$HOMEBREW_PREFIX"/etc/bash_completion.d/*
@@ -30,15 +40,5 @@ if type brew &>/dev/null; then
     source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
   fi
 fi
-
-# Git prompt injection
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWCOLORHINTS=true
-PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "\h:\w" "\\\$ "'
-
-function yarnx {
-  `yarn bin`/$1 "${@:2}"
-}
 
 source ~/.profile
