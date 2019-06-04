@@ -8,6 +8,12 @@ Configuration files for Bash, Git, Rubygems, Sublime Text, and more.
 ln -s `pwd`/bash/bash_profile ~/.bash_profile
 ```
 
+## Zsh
+
+```zsh
+ln -s `pwd`/zsh/zprofile ~/.zprofile
+```
+
 ## Git
 
 ```bash
