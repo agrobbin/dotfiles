@@ -17,10 +17,7 @@ alias rs="rails server"
 alias rc="rails console"
 alias ber="be rake"
 alias r="be rspec"
-
-function yarnx {
-  `yarn bin`/$1 "${@:2}"
-}
+alias yr="yarn run"
 
 # Git prompt configuration
 GIT_PS1_SHOWDIRTYSTATE=true
