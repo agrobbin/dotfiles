@@ -19,6 +19,10 @@ alias ber="be rake"
 alias r="be rspec"
 alias yr="yarn run"
 
+# Rubygems/Bundler configuration
+export GEM_EDITOR=subl
+export BUNDLER_EDITOR=subl
+
 # Git prompt configuration and injection
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
