@@ -9,7 +9,7 @@
 	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"save_on_focus_lost": true,
 	"show_definitions": false,
@@ -20,5 +20,5 @@
 		"gray_antialias"
 	],
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
 }

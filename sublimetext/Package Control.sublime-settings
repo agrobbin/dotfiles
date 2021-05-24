@@ -7,7 +7,6 @@
 	"installed_packages":
 	[
 		"ayu",
-		"Babel",
 		"Better CoffeeScript",
 		"Cucumber",
 		"Gherkin (Cucumber) Formatter",
@@ -16,6 +15,6 @@
 		"RSpec",
 		"Sass",
 		"SideBarEnhancements",
-		"Swift"
-	]
+		"Swift",
+	],
 }
