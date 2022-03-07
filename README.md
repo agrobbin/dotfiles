@@ -1,6 +1,6 @@
 # dotfiles
 
-Configuration files for Bash, Git, Rubygems, Sublime Text, and more.
+Configuration files for Bash, Zsh, Git, Rubygems, Sublime Text, and more.
 
 ## Bash
 
