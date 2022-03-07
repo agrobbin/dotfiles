@@ -17,7 +17,7 @@ ln -s `pwd`/zsh/zprofile ~/.zprofile
 ## Git
 
 ```bash
-ln -s `pwd`/git/gitconfig /usr/local/etc/gitconfig
+ln -s `pwd`/git/gitconfig $(brew --prefix)/etc/gitconfig
 ln -s `pwd`/git/gitignore_global ~/.gitignore_global
 ```
 
