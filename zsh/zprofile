@@ -1,10 +1,5 @@
-# rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
-
-# nodenv
-export NODENV_ROOT=/usr/local/var/nodenv
-eval "$(nodenv init -)"
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 export EDITOR=nano
 
