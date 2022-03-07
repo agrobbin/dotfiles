@@ -1,12 +1,6 @@
 # dotfiles
 
-Configuration files for Bash, Zsh, Git, Rubygems, Sublime Text, and more.
-
-## Bash
-
-```bash
-ln -s `pwd`/bash/bash_profile ~/.bash_profile
-```
+Configuration files for Zsh, Git, Rubygems, Sublime Text, and more.
 
 ## Zsh
 
