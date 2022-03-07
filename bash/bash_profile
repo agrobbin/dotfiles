@@ -1,6 +1,9 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Sublime Text
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
 # asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
 
