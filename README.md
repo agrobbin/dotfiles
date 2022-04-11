@@ -1,6 +1,14 @@
 # dotfiles
 
-Configuration files for Zsh, Git, Rubygems, Sublime Text, and more.
+Configuration files for Homebrew, Zsh, Git, Rubygems, Sublime Text, and more.
+
+## Homebrew
+
+[Install Homebrew](https://brew.sh/#install)
+
+```sh
+brew bundle --file=`pwd`/homebrew/Brewfile
+```
 
 ## Zsh
 
