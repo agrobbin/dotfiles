@@ -28,8 +28,8 @@ alias r="be rspec"
 alias yr="yarn run"
 
 # Rubygems/Bundler configuration
-export GEM_EDITOR=subl
-export BUNDLER_EDITOR=subl
+export GEM_EDITOR=code
+export BUNDLER_EDITOR=code
 
 # Git prompt configuration
 GIT_PS1_SHOWDIRTYSTATE=true
