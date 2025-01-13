@@ -10,7 +10,7 @@
   quotePath = false
   excludesFile = ~/.gitignore_global
 [help]
-  autoCorrect = 1
+  autoCorrect = prompt
 [diff]
   indentHeuristic = on
 [interactive]
