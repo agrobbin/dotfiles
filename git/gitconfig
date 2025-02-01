@@ -22,6 +22,7 @@
 [alias]
   lg = log --graph --abbrev-commit --date=human --pretty=format:'%C(auto)%h %d %Creset %s %C(cyan)(%aN) %Cgreen(%ad)'
   push-each-commit = !git fetch && git rev-list --reverse origin/master..HEAD | xargs -n 1 -I {} bash -c 'git reset --hard {} && git push -f'
+  stash-all = stash --include-untracked
 [pull]
   ff = only
 [push]
