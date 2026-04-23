@@ -37,3 +37,9 @@ ln -s `pwd`/sublimetext/Package\ Control.sublime-settings ~/Library/Application\
 ln -s `pwd`/sublimetext/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text/Packages/User/.
 ln -s `pwd`/sublimetext/Ruby\ Haml.sublime-settings ~/Library/Application\ Support/Sublime\ Text/Packages/User/.
 ```
+
+## Claude
+
+```sh
+ln -s `pwd`/claude/CLAUDE.md ~/.claude/.
+```
