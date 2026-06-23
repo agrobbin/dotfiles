@@ -15,8 +15,10 @@
 
 ## Git
 
-- **ALWAYS** use `--no-gpg-sign` when creating commits
-- **NEVER** add newlines to commit messages solely to satisfy the 80-character line length convention. **ONLY** use them when appropriate for context separation.
+- **ALWAYS** use `--no-gpg-sign` when creating commits.
+- **NEVER** add extraneous newlines to commit messages solely to satisfy the 72-character line length convention. **ONLY** use them when appropriate for context separation.
 - **ALWAYS** wrap code snippets in backticks, including in the summary and description sections of commit messages.
-- **ALWAYS** include the `Co-authored-by` trailer, attributing some of the work to Claude. Include the model name in the trailer, without any context length details (e.g. `Claude Opus 4.6`).
+- **ALWAYS** include the `Co-authored-by` trailer, attributing some of the work to Claude. Include the model name in the trailer, without any context length details (e.g. `Claude Opus 4.8`).
 - **ALWAYS** double-check commit message formatting before executing.
+- **PREFER** writing commit messages with prose rather than simply repeating the code changes. Still use code blocks when important for explaining complex bug fixes or providing critical context.
+- **NEVER** attempt to use the `gh` CLI to create PRs. I want to do that myself and won't give you a token.
