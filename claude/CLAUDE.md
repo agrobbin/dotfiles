@@ -4,6 +4,10 @@
 - **ALWAYS** present a brief plan and wait for confirmation *before* starting implementation. Do not make design decisions autonomously — especially around architecture, data mutation strategy (key removal vs. nullification), or migration ordering.
 - **ALWAYS** consider the names of local variables, methods, and classes just as critically as the actual functionality. Naming is key to comprehension, so abbreviated names (e.g. `u` vs `user`, `r` vs. `record`) are generally a bad idea.
 
+## Shell / Bash
+
+- **NEVER** restate the working directory in a Bash command — no leading `cd /path/to/repo &&`, no `git -C /path/to/repo`, no `make -C`, `npm --prefix`, etc. The working directory already persists between calls and is set to the repo root. Run commands directly against relative or repo-root-relative paths (e.g. `git status`, not `git -C /path/to/repo status`; `bin/rails test`, not `cd /path/to/repo && bin/rails test`). Only pass an explicit directory when the target genuinely differs from the working directory (e.g. operating on a separate worktree or submodule).
+
 ## Ruby / Rails
 
 - **PREFER** isolating presentational logic from domain model logic. Models should provide the core data, while other classes then use that model.
