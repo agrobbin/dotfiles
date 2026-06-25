@@ -2,7 +2,9 @@
 
 - **PREFER** existing patterns and abstractions over introducing new approaches. Check if the codebase already has a solution before proposing a new one (e.g., check for existing helper methods, established patterns).
 - **ALWAYS** present a brief plan and wait for confirmation *before* starting implementation. Do not make design decisions autonomously — especially around architecture, data mutation strategy (key removal vs. nullification), or migration ordering.
-- **ALWAYS** consider the names of local variables, methods, and classes just as critically as the actual functionality. Naming is key to comprehension, so abbreviated names (e.g. `u` vs `user`, `r` vs. `record`) are generally a bad idea.
+- **ALWAYS** consider the names of local variables, methods, and classes just as critically as the actual functionality. Naming is key to comprehension, so abbreviated names (e.g. `u` vs `user`, `r` vs. `record`) are generally a bad idea. Reach for expressive names — including extracting a well-named method or introducing a named intermediate (e.g. a predicate method or descriptive local) — to make intent obvious from the code itself.
+- **PREFER** self-explanatory code over comments. Before writing a comment, first try to make the code explain itself through better naming or extraction. **NEVER** write comments that merely restate what the code already says (e.g. `# increment the counter` above `counter += 1`), narrate a sequence of steps (`# Step 1: ...`, `# Now we ...`), or mark where/how code was changed — that context belongs in the commit message.
+- **ONLY** write a comment when it explains *why* rather than *what*: context the code genuinely cannot express, such as a non-obvious rationale, a workaround for an external bug, a deliberate edge-case decision, or a link to relevant documentation/tickets.
 
 ## Shell / Bash
 
