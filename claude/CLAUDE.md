@@ -8,6 +8,7 @@
 
 ## Shell / Bash
 
+- **PREFER** the built-in file-editing tool over shell-based rewrites (`perl -i`, `sed -i`, `awk`). Editing tools give exact-match safety, a reviewable diff, and avoid shell-escaping pitfalls. **ONLY** reach for shell rewrites for genuine mechanical sweeps across many files (e.g. a repo-wide rename), which is almost never the case.
 - **NEVER** restate the working directory in a Bash command — no leading `cd /path/to/repo &&`, no `git -C /path/to/repo`, no `make -C`, `npm --prefix`, etc. The working directory already persists between calls and is set to the repo root. Run commands directly against relative or repo-root-relative paths (e.g. `git status`, not `git -C /path/to/repo status`; `bin/rails test`, not `cd /path/to/repo && bin/rails test`). Only pass an explicit directory when the target genuinely differs from the working directory (e.g. operating on a separate worktree or submodule).
 
 ## Ruby / Rails
