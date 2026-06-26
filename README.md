@@ -42,4 +42,6 @@ ln -s `pwd`/sublimetext/Ruby\ Haml.sublime-settings ~/Library/Application\ Suppo
 
 ```sh
 ln -s `pwd`/claude/CLAUDE.md ~/.claude/.
+ln -s `pwd`/claude/settings.json ~/.claude/.
+ln -s `pwd`/claude/statusline-command.sh ~/.claude/.
 ```
