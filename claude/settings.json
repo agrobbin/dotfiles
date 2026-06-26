@@ -7,6 +7,11 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(ls:*)",
+      "Bash(bin/packwerk:*)",
+      "Bash(bin/rails generate:*)",
+      "Bash(bin/rails test:*)",
+      "Bash(bin/rails zeitwerk:check)",
+      "Bash(bin/rubocop:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)"
     ]
