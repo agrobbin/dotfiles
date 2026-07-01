@@ -10,6 +10,9 @@
 
 - **PREFER** the built-in file-editing tool over shell-based rewrites (`perl -i`, `sed -i`, `awk`). Editing tools give exact-match safety, a reviewable diff, and avoid shell-escaping pitfalls. **ONLY** reach for shell rewrites for genuine mechanical sweeps across many files (e.g. a repo-wide rename), which is almost never the case.
 - **NEVER** restate the working directory in a Bash command — no leading `cd /path/to/repo &&`, no `git -C /path/to/repo`, no `make -C`, `npm --prefix`, etc. The working directory already persists between calls and is set to the repo root. Run commands directly against relative or repo-root-relative paths (e.g. `git status`, not `git -C /path/to/repo status`; `bin/rails test`, not `cd /path/to/repo && bin/rails test`). Only pass an explicit directory when the target genuinely differs from the working directory (e.g. operating on a separate worktree or submodule).
+- **NEVER** chain independent commands into one Bash call with `;`/`&&`/`|` just to save round-trips. The permission matcher evaluates each segment separately and prompts unless *every* segment matches an allow rule, so bundling makes calls un-allowlistable and couples unrelated permissions. Run read-only inspection commands as separate calls — each maps to a reusable prefix rule. **ONLY** combine when there's a genuine data dependency (a real pipe like `git show … | grep …`).
+- **NEVER** add decorative `echo "=== ... ==="` headers to label command output for myself — that framing belongs in the reply text, and the extra segment just needs its own permission.
+- **ALWAYS** write temporary files (scripts, intermediate output, scratch data) to the session scratchpad directory — **NEVER** `/tmp` or other system temp dirs.
 
 ## Ruby / Rails
 
