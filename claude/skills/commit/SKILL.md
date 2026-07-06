@@ -64,6 +64,14 @@ After committing, run `git log -1` (or `git log -n <count>` when you made severa
 
 If Alex amends, squashes, or rebases and asks you to revisit a message, rewrite it to match the *final* diff — don't just append. If he describes a plan to reorder/squash, confirm it's actually right rather than blindly agreeing.
 
+## GitHub PRs
+
+When asked to write a PR title and description, follow these principles:
+
+- **Title**: If there is 1 commit, use the subject line of that commit. If there are multiple commits, summarize the overall changes on the branch in a single line.
+- **Description**: If there is 1 commit, use the body of that commit. If there are multiple commits, summarize the overall changes, basing the length on the complexity of the diff.
+- **Formatting**: Use Markdown, with fenced code blocks for any examples or logs. Avoid hard-wrapping lines; let them flow naturally.
+
 ## Examples (real, abbreviated)
 
 Trivial — subject only:
