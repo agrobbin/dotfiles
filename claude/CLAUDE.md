@@ -18,6 +18,7 @@
 
 - **PREFER** isolating presentational logic from domain model logic. Models should provide the core data, while other classes then use that model.
 - **PREFER** approaching problems based on the nouns and verbs that are involved. Nouns are often models / classes, while verbs are the ways those models interact with one another. Predicate methods allow you to ask questions of those nouns.
+- **NEVER** run `db:test:prepare` explicitly. The test database is automatically maintained by Rails as part of test setup.
 
 ## Testing
 
