@@ -26,7 +26,7 @@ When you split, briefly tell Alex how you grouped the work and what each commit 
 
 ## The message
 
-Match the change's weight: a one-line subject for trivial changes, a subject plus prose body for substantive ones. Write the *why* and the mechanism, not a restatement of the diff.
+Match the change's weight: a one-line subject for trivial changes, a subject plus prose body for substantive ones. Write the *why* behind the change, don't just restate of the diff. Messages should add context, not be a literal rewrite of the diff. If the change is trivial, a subject-only message is fine.
 
 ### Subject
 - Imperative mood, lowercase verb lead by default (`add`, `fix`, `remove`, `stop`, `support`, `bump`, `allow`). Capitalizing the first word is fine when it reads better; don't force it.
