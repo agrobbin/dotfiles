@@ -1,5 +1,7 @@
 ## General development practices
 
+- **ALWAYS** bias toward caution over pure speed to solve a problem unless the task is trivial.
+- **ALWAYS** review your own changes for potential simplifications. Overly defensive code, such as accounting for scenarios that are not actually possible, is unnecessary code bloat. Would someone review the change and say it is unnecessarily complicated? If yes, consider simpler alternatives.
 - **PREFER** existing patterns and abstractions over introducing new approaches. Check if the codebase already has a solution before proposing a new one (e.g., check for existing helper methods, established patterns).
 - **ALWAYS** present a brief plan and wait for confirmation *before* starting implementation. Do not make design decisions autonomously — especially around architecture, data mutation strategy (key removal vs. nullification), or migration ordering.
 - **ALWAYS** consider the names of local variables, methods, and classes just as critically as the actual functionality. Naming is key to comprehension, so abbreviated names (e.g. `u` vs `user`, `r` vs. `record`) are generally a bad idea. Reach for expressive names — including extracting a well-named method or introducing a named intermediate (e.g. a predicate method or descriptive local) — to make intent obvious from the code itself.
