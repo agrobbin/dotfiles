@@ -26,7 +26,9 @@ When you split, briefly tell Alex how you grouped the work and what each commit 
 
 ## The message
 
-Match the change's weight: a one-line subject for trivial changes, a subject plus prose body for substantive ones. Write the *why* behind the change, don't just restate of the diff. Messages should add context, not be a literal rewrite of the diff. If the change is trivial, a subject-only message is fine.
+Match the change's weight — where *weight* means how much non-obvious reasoning the change carries, **not** how many files it touches. A 9-file feature whose rationale is one sentence gets a one-sentence body. Write the *why* behind the change; messages should add context, not restate the diff.
+
+**Budget:** subject-only for trivial/mechanical changes. **One short paragraph** for most changes. **Two at the very most**, for genuinely subtle ones. If you're writing a third, you've started explaining the diff instead of the reasoning — cut back.
 
 ### Subject
 - Imperative mood, lowercase verb lead by default (`add`, `fix`, `remove`, `stop`, `support`, `bump`, `allow`). Capitalizing the first word is fine when it reads better; don't force it.
@@ -35,13 +37,21 @@ Match the change's weight: a one-line subject for trivial changes, a subject plu
 - Don't use prefixes (e.g. `chore` or `feat`).
 
 ### Body (when the change warrants one)
-- Prose paragraphs explaining *why* and *how it works* — the reasoning the diff can't show. Call out trade-offs and deliberate non-decisions ("deliberately *not* `none` because…").
+- One paragraph on *why*, and *how it works* only where that isn't evident — the reasoning the diff can't show. A trade-off or deliberate non-decision ("deliberately *not* `none` because…") gets **one sentence**, not its own paragraph.
 - **CRITICAL — no line wrapping.** Write each paragraph as a single continuous line. Do **not** hard-wrap or soft-wrap at 72/80 characters. Long lines are correct here even though they look wrong in a terminal preview.
 - Newlines are only for: separating subject from body, separating distinct paragraphs (one blank line), and before the trailer. Never insert newlines mid-paragraph.
 - Backtick all code identifiers, field names, file paths, and values.
-- Weave in concrete examples where they sharpen the point (`10 <= 3 is false`, a sample query like `"tim cook apple"`).
-- Use fenced code blocks for things that genuinely add context: a failing test's output, a stack trace, a CVE/docs URL, a version-diff link.
-- Reference any specific context Alex asked you to include (blog posts, tickets, sibling-repo PR references).
+
+Only when it earns its place:
+- A concrete example that sharpens the point (`10 <= 3 is false`, a sample query like `"tim cook apple"`) — at most one per point.
+- A fenced code block for something prose can't carry: a failing test's output, a stack trace, a CVE/docs URL, a version-diff link.
+- Specific context Alex asked you to include (blog posts, tickets, sibling-repo PR references).
+
+### Cut these
+- **The plumbing inventory.** No "wired through the usual layers" paragraph listing registrations, params allowlists, or regenerated specs — the diff shows all of it.
+- **Defenses of style choices** (which mixin or base class, naming, file placement) unless the choice was contested or genuinely surprising.
+- **A second example making the same point.** One is enough.
+- **Anything a reviewer gets off the diff in ten seconds.**
 
 ## Committing
 
@@ -96,4 +106,14 @@ Dependency bump — short body with a link:
 upgrade Brakeman to v4.0.5
 
 https://brakemanscanner.org/blog/2026/06/12/brakeman-8-dot-0-dot-5-released
+```
+
+Substantive feature — nine files changed, and still just one paragraph of *why* plus one sentence of trade-off. This is the length to beat, not a floor to build on:
+
+```
+add `given_name` and `family_name` facets to person search
+
+Two scalar facets that match only their own field, unlike `name`, which spans `given_name`, `family_name`, and `full_name` — so `family_name: 'Scott'` returns Daniel Scott but not Scott Boatwright. The shared query shape lives in a `Facets::NameField` mixin; each facet just sets `field`.
+
+Prefix matching runs against the analyzed text fields rather than new `as_you_type` subfields, keeping this off the reindex path. The trade-off is no accent folding: `family_name: 'Gonzalez'` won't match `González`.
 ```
