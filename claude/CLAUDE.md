@@ -30,5 +30,4 @@
 ## Git
 
 - **ALWAYS** use the `/commit` skill to create commits and write commit messages.
-- **ALWAYS** use `--no-gpg-sign` when creating commits.
 - **NEVER** attempt to use the `gh` CLI to create PRs. I want to do that myself and won't give you a token.

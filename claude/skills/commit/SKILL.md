@@ -55,14 +55,12 @@ Only when it earns its place:
 
 ## Committing
 
-**ALWAYS** pass `--no-gpg-sign`.
-
 **ALWAYS** end with the `Co-authored-by` trailer, including the **model name only**. Strip any context-window suffix (e.g. `(1M context)`) the harness footer would otherwise add. Use whichever model is actually authoring (e.g. `Claude Opus 4.8`).
 
 Pass the message via multiple `-m` flags (one per paragraph/trailer) so each `-m` is one unwrapped line and you never embed manual `\n` wraps:
 
 ```sh
-git commit --no-gpg-sign \
+git commit \
   -m "add \`language\` facet to person search" \
   -m "Adds a scopeable facet for filtering people by spoken language, optionally narrowed to a \`language_scope\` proficiency level. With no scope it queries \`languages_all\`; with a scope it routes to the matching per-proficiency keyword field." \
   -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
