@@ -24,7 +24,8 @@
       "Bash(bin/rails zeitwerk:check)",
       "Bash(bin/rubocop:*)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Artifact"
     ]
   },
   "statusLine": {
