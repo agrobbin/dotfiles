@@ -32,7 +32,6 @@
   "enabledPlugins": {
     "ruby-lsp@claude-plugins-official": true
   },
-  "autoUpdatesChannel": "stable",
   "tui": "fullscreen",
   "agentPushNotifEnabled": true
 }
