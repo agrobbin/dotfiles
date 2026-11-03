@@ -34,3 +34,5 @@
   showUntrackedFiles = all
 [commit]
   gpgSign = true
+[branch]
+  autoSetupMerge = simple
