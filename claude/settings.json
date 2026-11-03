@@ -29,6 +29,10 @@
     "type": "command",
     "command": "sh ~/.claude/statusline-command.sh"
   },
+  "attribution": {
+    "pr": "",
+    "sessionUrl": false
+  },
   "enabledPlugins": {
     "ruby-lsp@claude-plugins-official": true
   },

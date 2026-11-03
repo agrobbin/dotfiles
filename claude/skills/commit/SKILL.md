@@ -55,8 +55,6 @@ Only when it earns its place:
 
 ## Committing
 
-**ALWAYS** end with the `Co-authored-by` trailer, including the **model name only**. Strip any context-window suffix (e.g. `(1M context)`) the harness footer would otherwise add. Use whichever model is actually authoring (e.g. `Claude Opus 4.8`).
-
 Pass the message via multiple `-m` flags (one per paragraph/trailer) so each `-m` is one unwrapped line and you never embed manual `\n` wraps:
 
 ```sh
