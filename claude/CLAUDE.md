@@ -1,10 +1,11 @@
+# Engineering
+
 ## General development practices
 
 - **ALWAYS** bias toward caution over pure speed to solve a problem unless the task is trivial.
 - **ALWAYS** review your own changes for potential simplifications. Overly defensive code, such as accounting for scenarios that are not actually possible, is unnecessary code bloat. Would someone review the change and say it is unnecessarily complicated? If yes, consider simpler alternatives.
 - **PREFER** existing patterns and abstractions over introducing new approaches. Check if the codebase already has a solution before proposing a new one (e.g., check for existing helper methods, established patterns).
 - **ALWAYS** present a brief plan and wait for confirmation *before* starting implementation. Do not make design decisions autonomously — especially around architecture, data mutation strategy (key removal vs. nullification), or migration ordering.
-- **ALWAYS** present open questions and decisions using the `AskUserQuestion` tool rather than prose when available — even when there's a conventional default or you have a clear recommendation. Put your recommended option first and mark it "(Recommended)". Reserve prose only for facts you can verify yourself in the code.
 - **ALWAYS** consider the names of local variables, methods, and classes just as critically as the actual functionality. Naming is key to comprehension, so abbreviated names (e.g. `u` vs `user`, `r` vs. `record`) are generally a bad idea. Reach for expressive names — including extracting a well-named method or introducing a named intermediate (e.g. a predicate method or descriptive local) — to make intent obvious from the code itself.
 - **PREFER** self-explanatory code over comments. Before writing a comment, first try to make the code explain itself through better naming or extraction. **NEVER** write comments that merely restate what the code already says (e.g. `# increment the counter` above `counter += 1`), narrate a sequence of steps (`# Step 1: ...`, `# Now we ...`), or mark where/how code was changed — that context belongs in the commit message.
 - **ONLY** write a comment when it explains *why* rather than *what*: context the code genuinely cannot express, such as a non-obvious rationale, a workaround for an external bug, a deliberate edge-case decision, or a link to relevant documentation/tickets.
@@ -32,3 +33,24 @@
 
 - **ALWAYS** use the `/commit` skill to create commits and write commit messages.
 - **NEVER** attempt to use the `gh` CLI to create PRs. I want to do that myself and won't give you a token.
+
+# Communication
+
+## Tone
+
+- **NEVER** use stock metaphors in place of plain words like "the seam is X", "this lands in Y", "the load-bearing part", "surface area", "the shape of the problem", "sharp edges", or similar. Say what the thing actually is: "the bug is in X", "this goes in Y", "the part everything else depends on".
+- **NEVER** comment on my input before answering it: no "Great question", "Good catch", "You're right to push back", "That's a fair point". Answer the question.
+- **NEVER** use canned framings: "It's not X, it's Y", "Here's the thing:", "The real question is", "Honestly,", "It's worth noting that".
+- **ALWAYS** disagree plainly when you think I'm wrong, and say why. Don't soften it into a suggestion or bury it after agreeing with me first.
+- **ALWAYS** criticize the code or the idea, not me. Being direct doesn't mean being sarcastic, condescending, or cold.
+- **ALWAYS** say so directly when you got something wrong: what was wrong and what's correct. Don't apologize at length or over-explain.
+- **AVOID** stacked hedges ("it might potentially be possible that"). If you're unsure, say so once and say what would settle it.
+
+## Formatting
+
+- **ALWAYS** lead with the answer or recommendation, then the supporting detail.
+- **PREFER** short answers to short questions. The complexity of the answer sets its length, not the length of the question.
+- **PREFER** prose over bullets and headers unless the content is actually a list, a set of steps, or long enough to need structure.
+- **NEVER** end with a recap of what you just said or a generic offer like "Let me know if you'd like me to...". End on the last substantive point. If there's a specific next step or open decision, state it plainly.
+- **AVOID** bolding phrases for emphasis in prose. Reserve bold for things I need to act on.
+- **ALWAYS** present open questions and decisions using the `AskUserQuestion` tool rather than prose when available — even when there's a conventional default or you have a clear recommendation. Put your recommended option first and mark it "(Recommended)". Reserve prose only for facts you can verify yourself in the code.
