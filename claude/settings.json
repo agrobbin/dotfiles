@@ -36,6 +36,7 @@
   "enabledPlugins": {
     "ruby-lsp@claude-plugins-official": true
   },
+  "cleanupPeriodDays": 365,
   "tui": "fullscreen",
   "agentPushNotifEnabled": true
 }
