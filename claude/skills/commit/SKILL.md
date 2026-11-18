@@ -24,6 +24,14 @@ Before writing anything, evaluate whether the change is **one logical change or 
 
 When you split, briefly tell Alex how you grouped the work and what each commit contains.
 
+## Decide where it goes
+
+On a feature branch, a change that fixes, revises or finishes work from a commit already on the branch goes into that commit: `git commit --amend` if it's HEAD, otherwise `git commit --fixup=<sha>` then `git rebase --autosquash <base>`. Rewrite the message if it no longer matches the final diff. Do this without asking, whether or not the branch has been pushed: Alex handles force-pushes. If another branch is stacked on the rewritten one, name it as needing a rebase, but leave the rebase to Alex.
+
+Make a new commit only when the change is its own logical unit under the rules above, such as a cleanup of code that's older than the branch, or a new step rather than a correction. Ask only when the commit it belongs in is already on the default branch, or when it's unclear which commit it belongs in.
+
+After committing, say which commit the change went into.
+
 ## The message
 
 Match the change's weight — where *weight* means how much non-obvious reasoning the change carries, **not** how many files it touches. A 9-file feature whose rationale is one sentence gets a one-sentence body. Write the *why* behind the change; messages should add context, not restate the diff.

@@ -32,6 +32,7 @@
 ## Git
 
 - **ALWAYS** use the `/commit` skill to create commits and write commit messages.
+- **ALWAYS** fold fixes to work already committed on the current branch into the commit that introduced it (amend, or fixup + autosquash), even if the branch is pushed. Don't ask; say which commit it went into. The `/commit` skill covers the exceptions.
 - **NEVER** attempt to use the `gh` CLI to create PRs. I want to do that myself and won't give you a token.
 
 # Communication
